@@ -12,17 +12,8 @@ using namespace std;
 int main()
 {
     //cout << "Hello world!" << endl;
+    Menuacesso menu;
 
-    // Declarar poteiros e instanciar controladoras.
-    IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
-
-    cntrApresentacaoAutenticacao = new CntrApresentacaoAutenticacao();
-
-    // Instanciar stubs.
-    IServicoAutenticacao *stubServicoAutenticacao;
-    //stubServicoAutenticacao = new StubServicoAutenticacao();
-
-    // Interligar controladoras e stubs.
-    //cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(stubServicoAutenticacao);
+    menu.executar();
     return 0;
 }

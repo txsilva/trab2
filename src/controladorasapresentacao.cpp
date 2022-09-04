@@ -3,44 +3,43 @@
 //--------------------------------------------------------------------------------------------
 // Implementações de métodos de classes controladoras.
 
-bool CntrApresentacaoAutenticacao::autenticar(Email *email){
+void Menuacesso::executar(){
 
-    // Mensagens a serem apresentadas na tela de autenticação.
+    // Mensagens a serem apresentadas na tela inicial.
 
-    char texto1[]="Digite o Email  : ";
-    char texto2[]="Digite a senha: ";
-    char texto3[]="Dado em formato incorreto. Digite algo.";
+    char texto1[]="Selecione um dos servicos : ";
+    char texto2[]="1 - Listar hospedagem.";
+    char texto3[]="2 - Fazer login.";
+    char texto4[]="3 - Sair do sistema.";
 
-    // Campos de entrada.
+        int campo;                                                                                  // Campo de entrada.
 
-    char campo1[80];
-    char campo2[80];
+    bool apresentar = true;                                                                     // Controle de laço.
 
-    Senha senha;                                                                                // Instancia a classe Senha.
-
-    while(true){
-
-        // Apresenta tela de autenticação.
-
+    while(apresentar){
         CLR_SCR;                                                                                // Limpa janela.
 
-        cout << texto1 << " ";                                                                  // Imprime nome do campo.
-        cin >> campo1;                                                                          // Lê valor do campo.
-        cout << texto2 << " ";                                                                  // Imprime nome do campo.
-        cin >> campo2;                                                                          // Lê valor do campo.
+        cout << texto1 << endl;                                                                 // Imprime nome do campo.
+        cout << texto2 << endl;                                                                 // Imprime nome do campo.
+        cout << texto3 << endl;                                                                 // Imprime nome do campo.
+        cout << texto4 << endl;                                                                 // Imprime nome do campo.
 
-        try{
-            email.setValor(string(campo1));                                                     // Atribui valor ao CPF.
-            senha.setValor(string(campo2));                                            // Atribui Valor à senha.
-            break;                                                                              // Abandona laço em caso de formatos corretos.
+        campo = getch() - 48;                                                                   // Leitura do campo de entrada e conversão de ASCII.
+
+        switch(campo){
+            case 1:
+                cout << "\n\nExibir lista de hospedagens\n\n" << endl;
+                break;
+            case 2:
+                cout << "\n\nPedir email e senha\n\n" << endl;
+                break;
+            case 3:
+                cout << "\n\nVoce saiu do sistema\n\n" << endl;
+                break;
         }
-        catch(invalid_argument &exp){                                                           // Captura exceção devido a formato incorreto.
-            CLR_SCR;                                                                            // Limpa janela.
-            cout << texto3 << endl;                                                             // Informa formato incorreto.
-            getch();                                                                            // Lê caracter digitado.
-        }
+        apresentar = false;
     }
-    return (cntr->autenticar(*email, senha));                                                     // Solicita serviço de autenticação.
+    return;
 }
 
 //--------------------------------------------------------------------------------------------

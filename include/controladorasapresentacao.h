@@ -18,14 +18,20 @@
 
 class CntrApresentacaoAutenticacao:public IApresentacaoAutenticacao{
     private:
-        IServicoAutenticacao *cntr;
+
     public:
-        bool autenticar(Email*);
-        void setCntrServicoAutenticacao(IServicoAutenticacao*);
+
 };
 
-inline void CntrApresentacaoAutenticacao::setCntrServicoAutenticacao(IServicoAutenticacao *cntr){
-    this->cntr = cntr;
-}
+class Menuacesso{
+    private:
+        Usuario usuario;
+    public:
+        void executar();
+
+        void setEmail(const Email&);
+        Email getEmail() const;
+
+};
 
 #endif // CONTROLADORASAPRESENTACAO_H_INCLUDED
