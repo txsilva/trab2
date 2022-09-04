@@ -16,13 +16,6 @@
 
 //--------------------------------------------------------------------------------------------
 
-class CntrApresentacaoAutenticacao:public IApresentacaoAutenticacao{
-    private:
-
-    public:
-
-};
-
 class Menuacesso{
     private:
         Usuario usuario;
