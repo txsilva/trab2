@@ -9,7 +9,7 @@ const string StubServicoAutenticacao::INVALIDO = "12345";
 // Implementações dos métodos de classes stub.
 
 bool StubServicoAutenticacao::autenticar(Email email, Senha senha){
-    if(email.getNomeemail().compare(INVALIDO) == 0)
+    if(email.getValor().compare(INVALIDO) == 0)
         return false;
     return true;
 }

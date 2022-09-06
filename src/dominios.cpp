@@ -229,9 +229,9 @@ void Senha::validar(string senha){
 }
 
 
-void Senha::setNome_senha(string senha){
-    validar(senha);
-    this->nome_senha=senha;
+void Senha::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
 }
 
 //validação de Data
@@ -317,7 +317,7 @@ int tamanho = email.length();
 
 }
 
-void Email::setNomeemsil(string email){
-    validar(email);
-    this->nome_email=email;
+void Email::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
 }

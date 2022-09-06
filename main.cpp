@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     //cout << "Hello world!" << endl;
-    Menuacesso menu;
+    ControladoraMenuacesso menu;
 
     menu.executar();
     return 0;

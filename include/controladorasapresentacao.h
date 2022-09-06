@@ -16,14 +16,17 @@
 
 //--------------------------------------------------------------------------------------------
 
-class Menuacesso{
+class ControladoraMenuacesso{
     private:
-        Usuario usuario;
+        Email email;
+        Senha senha;
     public:
         void executar();
-
+        void menulogado();
         void setEmail(const Email&);
-        Email getEmail() const;
+        getEmail() const;
+        void setSenha(const Senha&);
+        getSenha() const;
 
 };
 

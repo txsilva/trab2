@@ -22,7 +22,6 @@ class IApresentacaoAutenticacao {
         virtual ~IApresentacaoAutenticacao(){}
 };
 
-
 //--------------------------------------------------------------------------------------------
 // Declarações das interfaces da camada de serviço.
 class IServicoAutenticacao {

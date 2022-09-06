@@ -23,26 +23,28 @@ inline string Nome::getNome()const{
 ///classe referente a Email
 class Email{
     private:
+        string valor;
         string nome_email;
         void validar(string);
     public:
-        void setNomeemsil(string);
-        string getNomeemail()const;
+        void setValor(string);
+        string getValor() const;
 };
-inline string Email::getNomeemail()const{
-    return nome_email;
+inline string Email::getValor()const{
+    return valor;
 }
 
 class Senha{
     private:
+        string valor;
         string nome_senha;
         void validar(string);
     public:
-        void setNome_senha(string);
-        string getNome_senha()const;
+        void setValor(string);
+        string getValor()const;
 };
-inline string Senha::getNome_senha()const{
-    return nome_senha;
+inline string Senha::getValor()const{
+    return valor;
 }
 
 ///classe referente ao idioma
