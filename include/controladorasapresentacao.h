@@ -4,6 +4,8 @@
 #include <conio.h>
 #include <iostream>
 #include <string.h>
+#include <string.h>
+#include <list>
 
 #include "dominios.h"
 #include "entidades.h"
@@ -16,7 +18,13 @@
 
 //--------------------------------------------------------------------------------------------
 
-class ControladoraMenuacesso{
+class ListarHospedagem{
+    private:
+    public:
+        void listar();
+};
+
+class ControladoraMenuacesso:public ListarHospedagem{
     private:
         Email email;
         Senha senha;
@@ -27,7 +35,6 @@ class ControladoraMenuacesso{
         getEmail() const;
         void setSenha(const Senha&);
         getSenha() const;
-
 };
 
 #endif // CONTROLADORASAPRESENTACAO_H_INCLUDED

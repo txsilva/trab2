@@ -1,6 +1,9 @@
 #ifndef INTERFACES_H_INCLUDED
 #define INTERFACES_H_INCLUDED
 
+#include <string.h>
+#include <list>
+
 #include "dominios.h"
 #include "entidades.h"
 
@@ -15,18 +18,18 @@
 //--------------------------------------------------------------------------------------------
 // Declarações das interfaces da camada de apresentação.
 
-class IApresentacaoAutenticacao {
+class IApresentacaoHosp {
+    std::list<string> myhospedagem = {};
     public:
-        virtual bool autenticar(Email*) = 0;
-        //virtual void setCntrServicoAutenticacao(IServicoAutenticacao*) = 0;
-        virtual ~IApresentacaoAutenticacao(){}
+        virtual void listar(string myhospedagem);
+        virtual ~IApresentacaoHosp(){}
 };
 
 //--------------------------------------------------------------------------------------------
 // Declarações das interfaces da camada de serviço.
 class IServicoAutenticacao {
     public:
-        virtual bool autenticar(Email, Senha) = 0;
+        virtual bool autenticar(Email&, Senha&) = 0;
         virtual ~IServicoAutenticacao(){}
 };
 

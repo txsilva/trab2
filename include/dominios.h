@@ -1,7 +1,6 @@
 #ifndef DOMINIOS_H
 #define DOMINIOS_H
 
-
 #include <string>
 
 //matricula: 190035145
